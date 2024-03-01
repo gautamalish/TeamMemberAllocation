@@ -1,7 +1,7 @@
 export default function Footer(){
     return(
         <div>
-            <h1>footer</h1>
+            <p className="credit">Created by Alish {new Date().getFullYear()}</p>
         </div>
     )
 }
