@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  width: 60vw;
+  margin: auto;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cardContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-top: 10px;
+}
+.card{
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+.selectTeam{
+  width: 50vw;
+  padding: 10px;
+}
+.selected{
+  box-shadow: rgba(0,0,0,0.16) 0px 1px 4px, rgb(51,51,51) 0px 0px 0px 3px;
+}
