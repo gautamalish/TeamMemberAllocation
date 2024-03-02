@@ -121,11 +121,12 @@ function App() {
       <Routes>
         <Route path='/'
           element={
-            <Card handleEmployeeClick={handleEmployeeClick} handleTeamSelectionChange={handleTeamSelectionChange} selectedTeam={selectedTeam} employees={employees}/>
+            <Card handleEmployeeClick={handleEmployeeClick} handleTeamSelectionChange={handleTeamSelectionChange} 
+            selectedTeam={selectedTeam} employees={employees}/>
           }>
       
       </Route>
-      <Route path='/GroupedTeamMembers' element={<GroupedTeamMembers/>}/> 
+      <Route path='/GroupedTeamMembers' element={<GroupedTeamMembers employees={employees} selectedTeam={selectedTeam}/>}/> 
       <Route path='*' element={<NotFound/>}/>
       </Routes>
       <Footer/>

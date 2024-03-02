@@ -72,3 +72,28 @@
   font-weight: bold;
   font-size: 20px;
 }
+.teamName{
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(128, 128, 128, 0.485);
+  padding: 5px;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+}
+.groupHolder{
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 191, 255, 0.305);
+  padding: 20px;
+  border-radius: 8px;
+}
+@media all and (max-width:600px){
+  .cardContainer{
+    grid-template-columns: 1fr;
+  }
+}
