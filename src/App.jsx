@@ -9,7 +9,7 @@ import NotFound from './NotFound'
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom'
 import Nav from './Nav'
 function App() {
-  const [selectedTeam,setSeelectedTeam]=React.useState(JSON.parse(localStorage.getItem("selectedTeam"))||"TeamB")
+  const [selectedTeam,setSelectedTeam]=React.useState(JSON.parse(localStorage.getItem("selectedTeam"))||"TeamB")
     const [employees,setEmployees]=React.useState(JSON.parse(localStorage.getItem("employees"))||[
         {
             id: 1,
@@ -126,7 +126,7 @@ function App() {
           }>
       
       </Route>
-      <Route path='/GroupedTeamMembers' element={<GroupedTeamMembers employees={employees} selectedTeam={selectedTeam}/>}/> 
+      <Route path='/GroupedTeamMembers' element={<GroupedTeamMembers employees={employees} selectedTeam={selectedTeam} setSelectedTeam={setSelectedTeam}/>}/> 
       <Route path='*' element={<NotFound/>}/>
       </Routes>
       <Footer/>

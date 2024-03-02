@@ -1,5 +1,5 @@
 import React from "react"
-export default function GroupedTeamMembers({employees,selectedTeam}){
+export default function GroupedTeamMembers({employees,selectedTeam,setSelectedTeam}){
     const [groupedEmployees,setGroupedEmployees]=React.useState(groupTeamMembers())
     function groupTeamMembers(){
         const teams=[]
@@ -28,6 +28,7 @@ export default function GroupedTeamMembers({employees,selectedTeam}){
             {...groupData,collapsed:!groupData.collapsed}:groupData
         ))
         setGroupedEmployees(transformedData)
+        setSelectedTeam(event.currentTarget.id)
     }
     return(
         <div>
